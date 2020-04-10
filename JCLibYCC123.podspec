@@ -32,9 +32,7 @@ Pod::Spec.new do |s|
   mtc.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
 
   include.subspec 'avatar' do |avatar|
-  avatar.source_files = 'JC-SDK-iOS-V1_20_1/include/avatar/*.h'
-  avatar.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/*.h'
-
+  
   avatar.subspec 'zos' do |zos|
   zos.source_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
   zos.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
