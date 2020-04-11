@@ -11,11 +11,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
   s.source       = { :http => 'http://developer.juphoon.com/portal/upload/sdk/JuphoonSDK_iOS_1.20.zip'}
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/grape/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/ios/*.h'
 
   s.subspec 'include' do |include|
 
@@ -42,6 +37,7 @@ Pod::Spec.new do |s|
               os.subspec 'ios' do |ios|
               ios.source_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/ios/*.h'
               ios.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/ios/*.h'
+              
 
   end
   end
@@ -51,6 +47,12 @@ Pod::Spec.new do |s|
   end
   end
   end
+  
+  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/*.h'
+  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
+  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/grape/*.h'
+  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
+  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/ios/*.h'
 
   s.vendored_frameworks  = "JC-SDK-iOS-V1_20_1/JCSDKOC.framework"
   s.vendored_libraries = "JC-SDK-iOS-V1_20_1/lib/ios/libmtc.a", "JC-SDK-iOS-V1_20_1/lib/ios/libzmf.a"
