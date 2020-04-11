@@ -49,5 +49,6 @@ Pod::Spec.new do |s|
   s.frameworks = 'AVFoundation', 'Security', 'AudioToolbox', 'CoreMedia', 'AssetsLibrary', 'CoreVideo', 'CFNetwork', 'CoreMotion', 'GLKit', 'ReplayKit', 'PushKit', 'SystemConfiguration', 'VideoToolbox'
   s.libraries = 'c++', 'resolv', 'z'
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/include" }
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'arm64 armv7 armv7s arm64e' }
 
   end
