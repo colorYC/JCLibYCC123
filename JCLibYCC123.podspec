@@ -45,7 +45,6 @@ Pod::Spec.new do |s|
   end
   end
   end
-  end
   
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/*.h'
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
