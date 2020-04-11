@@ -33,10 +33,9 @@ Pod::Spec.new do |s|
       zos.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
 
           zos.subspec 'os' do |os|
-
-              os.subspec 'ios' do |ios|
-              ios.source_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/ios/*.h'
-              ios.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/ios/*.h'
+              os.source_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/**/*.h'
+              os.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/**/*.h'
+              
               
 
   end
@@ -48,12 +47,11 @@ Pod::Spec.new do |s|
   end
   end
   
-    s.public_header_files = "JC-SDK-iOS-V1_20_1/include/**/**/*.h"
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/*.h'
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/grape/*.h'
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/ios/*.h'
+  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/**/*.h'
 
   s.vendored_frameworks  = "JC-SDK-iOS-V1_20_1/JCSDKOC.framework"
   s.vendored_libraries = "JC-SDK-iOS-V1_20_1/lib/ios/libmtc.a", "JC-SDK-iOS-V1_20_1/lib/ios/libzmf.a"
