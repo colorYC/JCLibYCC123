@@ -16,26 +16,23 @@ Pod::Spec.new do |s|
 
       include.subspec 'grape' do |grape|
       grape.source_files = 'JC-SDK-iOS-V1_20_1/include/grape/*.h'
-      grape.public_header_files = "JC-SDK-iOS-V1_20_1/include/grape/*.h"
 
       include.subspec 'lemon' do |lemon|
       lemon.source_files = 'JC-SDK-iOS-V1_20_1/include/lemon/*.h'
-      lemon.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/*.h'
+      
 
           lemon.subspec 'mtc' do |mtc|
           mtc.source_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
-          mtc.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
+
 
   include.subspec 'avatar' do |avatar|
   
       avatar.subspec 'zos' do |zos|
       zos.source_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
-      zos.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
 
           zos.subspec 'os' do |os|
-              os.source_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/**/*.h'
-              os.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/**/*.h'
-              
+              os.subspec 'os' do |ios|
+                  ios.source_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/ios/*.h'
               
 
   end
@@ -45,12 +42,7 @@ Pod::Spec.new do |s|
   end
   end
   end
-  
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/grape/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/*.h'
-  s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/avatar/zos/os/**/*.h'
+  end
 
   s.vendored_frameworks  = "JC-SDK-iOS-V1_20_1/JCSDKOC.framework"
   s.vendored_libraries = "JC-SDK-iOS-V1_20_1/lib/ios/libmtc.a", "JC-SDK-iOS-V1_20_1/lib/ios/libzmf.a"
