@@ -12,7 +12,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source       = { :http => 'http://developer.juphoon.com/portal/upload/sdk/JuphoonSDK_iOS_1.20.zip'}
 
-  s.public_header_files = "JC-SDK-iOS-V1_20_1/include/**/*.h"
   s.subspec 'include' do |include|
 
       include.subspec 'grape' do |grape|
@@ -49,6 +48,7 @@ Pod::Spec.new do |s|
   end
   end
   
+    s.public_header_files = "JC-SDK-iOS-V1_20_1/include/**/**/*.h"
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/*.h'
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/lemon/mtc/*.h'
   s.public_header_files = 'JC-SDK-iOS-V1_20_1/include/grape/*.h'
